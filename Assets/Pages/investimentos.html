@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+        <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fintech</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="../Css/investimento.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+        <!-- JavaScript -->
+
+    </head>
+    
+<body>
+    <div class="d-flex" id="wrapper">
+            
+        <div class="text-white" id="sidebar-wrapper">
+            <div class="sidebar-heading text-center py-4 primary-text fs-4 fw-bold text-uppercase border-bottom">
+                <h1>Fintech</h1>
+            </div>
+            <div class="list-group list-group-flush my-3">
+                <a href="index.html" class="list-group-item list-group-item-action bg-transparent second-text">
+                    <i class="bi bi-speedometer2 me-2"></i>Dashboard
+                <a href="investimentos.html" class="list-group-item list-group-item-action bg-transparent second-text active">
+                    <i class="bi bi-graph-up-arrow me-2"></i>Investimentos
+                </a>
+                <a href="transferir.html" class="list-group-item list-group-item-action bg-transparent second-text">
+                    <i class="bi bi-arrow-left-right me-2"></i>Transferir
+                </a>
+                <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+                    <i class="bi bi-person-circle me-2"></i>Perfil
+                </a>
+                <a href="#" class="list-group-item list-group-item-action bg-transparent text-danger fw-bold mt-5">
+                    <i class="bi bi-box-arrow-left me-2"></i>Sair
+                </a>
+            </div>
+        </div>
+        <div id="page-content-wrapper">
+            
+            <nav class="navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4">
+                <div class="d-flex align-items-center">
+                    <i class="bi bi-list primary-text fs-4 me-3" id="menu-toggle" style="cursor: pointer;"></i>
+                    <h2 class="fs-2 m-0">Minha Carteira</h2>
+                </div>
+            </nav>
+
+            <div class="container-fluid px-4">
+                
+                <div class="row mb-4">
+                    <div class="col">
+                        <h2 class="fw-bold text-dark">Principais investimentos</h2>
+                        <p class="text-muted">Acompanhe seu portfólio de investimentos.</p>
+                    </div>
+                </div>
+
+                <div class="row g-4 mb-5">
+                    <!-- Patrimônio Total - Linha completa -->
+                    <div class="col-12">
+                        <div class="card card-custom border-0 shadow-sm">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <h6 class="text-uppercase text-muted mb-0">Patrimônio Total</h6>
+                                    <i class="bi bi-safe fs-4 text-primary"></i>
+                                </div>
+                                <h3 class="fw-bold text-dark">R$ 42.500,00</h3>
+                                <small class="text-success fw-semibold"><i class="bi bi-arrow-up"></i> +1.2% este mês</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Renda Fixa - 50% -->
+                    <div class="col-12 col-md-6">
+                        <div class="card card-custom border-0 shadow-sm">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <h6 class="text-uppercase text-muted mb-0">Renda Fixa</h6>
+                                    <i class="bi bi-shield-check fs-4 text-warning"></i>
+                                </div>
+                                <h3 class="fw-bold text-dark">R$ 30.000,00</h3>
+                                <small class="text-muted">CDI, Tesouro</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Renda Variável - 50% -->
+                    <div class="col-12 col-md-6">
+                        <div class="card card-custom border-0 shadow-sm">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <h6 class="text-uppercase text-muted mb-0">Renda Variável</h6>
+                                    <i class="bi bi-graph-up-arrow fs-4 text-info"></i>
+                                </div>
+                                <h3 class="fw-bold text-dark">R$ 12.500,00</h3>
+                                <small class="text-danger fw-semibold"><i class="bi bi-arrow-down"></i> -0.5% hoje</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row my-5">
+                    <div class="col-12">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h4 class="fw-bold">Meus Ativos</h4>
+                            <button class="btn btn-primary btn-sm rounded-pill px-3 fw-bold">
+                                <i class="bi bi-plus-lg"></i> Novo Aporte
+                            </button>
+                        </div>
+
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body p-0">
+                                <div class="table-responsive">
+                                    <table class="table table-hover align-middle mb-0">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th class="ps-4">Ativo</th>
+                                                <th>Categoria</th>
+                                                <th>Valor Atual</th>
+                                                <th>Rentabilidade</th>
+                                                <th class="d-none d-md-table-cell">Vencimento</th> <th class="text-end pe-4">Ações</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="ps-4">
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="icon-box-sm bg-light rounded-circle me-3 text-primary">
+                                                            <i class="bi bi-bank"></i>
+                                                        </div>
+                                                        <div>
+                                                            <h6 class="mb-0 fw-bold">Tesouro Selic 2027</h6>
+                                                            <small class="text-muted">LFT</small>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span class="badge bg-warning-subtle text-warning rounded-pill">Renda Fixa</span></td>
+                                                <td class="fw-bold">R$ 15.420,00</td>
+                                                <td class="text-success fw-bold">+ 1.05%</td>
+                                                <td class="d-none d-md-table-cell">01/03/2027</td>
+                                                <td class="text-end pe-4">
+                                                    <button class="btn btn-sm btn-light text-primary"><i class="bi bi-eye"></i></button>
+                                                    <button class="btn btn-sm btn-light text-success"><i class="bi bi-plus-circle"></i></button>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="ps-4">
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="icon-box-sm bg-light rounded-circle me-3 text-info">
+                                                            <i class="bi bi-buildings"></i>
+                                                        </div>
+                                                        <div>
+                                                            <h6 class="mb-0 fw-bold">HGLG11</h6>
+                                                            <small class="text-muted">CSHG Logística</small>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span class="badge bg-info-subtle text-info rounded-pill">FIIs</span></td>
+                                                <td class="fw-bold">R$ 5.240,00</td>
+                                                <td class="text-success fw-bold">+ 0.80%</td>
+                                                <td class="d-none d-md-table-cell">-</td>
+                                                <td class="text-end pe-4">
+                                                    <button class="btn btn-sm btn-light text-primary"><i class="bi bi-eye"></i></button>
+                                                    <button class="btn btn-sm btn-light text-success"><i class="bi bi-plus-circle"></i></button>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="ps-4">
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="icon-box-sm bg-light rounded-circle me-3 text-warning">
+                                                            <i class="bi bi-lightning-charge"></i>
+                                                        </div>
+                                                        <div>
+                                                            <h6 class="mb-0 fw-bold">PETR4</h6>
+                                                            <small class="text-muted">Petrobras PN</small>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span class="badge bg-danger-subtle text-danger rounded-pill">Ações</span></td>
+                                                <td class="fw-bold">R$ 3.100,00</td>
+                                                <td class="text-danger fw-bold">- 1.20%</td>
+                                                <td class="d-none d-md-table-cell">-</td>
+                                                <td class="text-end pe-4">
+                                                    <button class="btn btn-sm btn-light text-primary"><i class="bi bi-eye"></i></button>
+                                                    <button class="btn btn-sm btn-light text-success"><i class="bi bi-plus-circle"></i></button>
+                                                </td>
+                                            </tr>
+                                            
+                                            <tr>
+                                                <td class="ps-4">
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="icon-box-sm bg-light rounded-circle me-3 text-success">
+                                                            <i class="bi bi-cash-stack"></i>
+                                                        </div>
+                                                        <div>
+                                                            <h6 class="mb-0 fw-bold">CDB Banco Inter</h6>
+                                                            <small class="text-muted">110% CDI - 2 anos</small>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span class="badge bg-warning-subtle text-warning rounded-pill">Renda Fixa</span></td>
+                                                <td class="fw-bold">R$ 8.500,00</td>
+                                                <td class="text-success fw-bold">+ 2.15%</td>
+                                                <td class="d-none d-md-table-cell">15/01/2026</td>
+                                                <td class="text-end pe-4">
+                                                    <button class="btn btn-sm btn-light text-primary"><i class="bi bi-eye"></i></button>
+                                                    <button class="btn btn-sm btn-light text-success"><i class="bi bi-plus-circle"></i></button>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="ps-4">
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="icon-box-sm bg-light rounded-circle me-3 text-primary">
+                                                            <i class="bi bi-trophy"></i>
+                                                        </div>
+                                                        <div>
+                                                            <h6 class="mb-0 fw-bold">Tesouro IPCA+ 2029</h6>
+                                                            <small class="text-muted">NTN-B Principal</small>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span class="badge bg-warning-subtle text-warning rounded-pill">Renda Fixa</span></td>
+                                                <td class="fw-bold">R$ 6.080,00</td>
+                                                <td class="text-success fw-bold">+ 1.85%</td>
+                                                <td class="d-none d-md-table-cell">15/08/2029</td>
+                                                <td class="text-end pe-4">
+                                                    <button class="btn btn-sm btn-light text-primary"><i class="bi bi-eye"></i></button>
+                                                    <button class="btn btn-sm btn-light text-success"><i class="bi bi-plus-circle"></i></button>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="ps-4">
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="icon-box-sm bg-light rounded-circle me-3 text-info">
+                                                            <i class="bi bi-building"></i>
+                                                        </div>
+                                                        <div>
+                                                            <h6 class="mb-0 fw-bold">XPML11</h6>
+                                                            <small class="text-muted">XP Malls FII</small>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span class="badge bg-info-subtle text-info rounded-pill">FIIs</span></td>
+                                                <td class="fw-bold">R$ 2.180,00</td>
+                                                <td class="text-success fw-bold">+ 0.65%</td>
+                                                <td class="d-none d-md-table-cell">-</td>
+                                                <td class="text-end pe-4">
+                                                    <button class="btn btn-sm btn-light text-primary"><i class="bi bi-eye"></i></button>
+                                                    <button class="btn btn-sm btn-light text-success"><i class="bi bi-plus-circle"></i></button>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td class="ps-4">
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="icon-box-sm bg-light rounded-circle me-3 text-danger">
+                                                            <i class="bi bi-currency-exchange"></i>
+                                                        </div>
+                                                        <div>
+                                                            <h6 class="mb-0 fw-bold">VALE3</h6>
+                                                            <small class="text-muted">Vale ON</small>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span class="badge bg-danger-subtle text-danger rounded-pill">Ações</span></td>
+                                                <td class="fw-bold">R$ 1.980,00</td>
+                                                <td class="text-success fw-bold">+ 3.45%</td>
+                                                <td class="d-none d-md-table-cell">-</td>
+                                                <td class="text-end pe-4">
+                                                    <button class="btn btn-sm btn-light text-primary"><i class="bi bi-eye"></i></button>
+                                                    <button class="btn btn-sm btn-light text-success"><i class="bi bi-plus-circle"></i></button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Seção de Distribuição do Portfólio -->
+                <div class="row mb-5">
+                    <div class="col-12 col-lg-6">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body">
+                                <h5 class="fw-bold mb-4">Distribuição do Portfólio</h5>
+                                <div class="mb-4">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <span class="fw-bold">Renda Fixa</span>
+                                        <span class="text-muted">70.6%</span>
+                                    </div>
+                                    <div class="progress" style="height: 8px;">
+                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 70.6%"></div>
+                                    </div>
+                                    <small class="text-muted">R$ 30.000,00</small>
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <span class="fw-bold">FIIs</span>
+                                        <span class="text-muted">17.4%</span>
+                                    </div>
+                                    <div class="progress" style="height: 8px;">
+                                        <div class="progress-bar bg-info" role="progressbar" style="width: 17.4%"></div>
+                                    </div>
+                                    <small class="text-muted">R$ 7.420,00</small>
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <span class="fw-bold">Ações</span>
+                                        <span class="text-muted">12.0%</span>
+                                    </div>
+                                    <div class="progress" style="height: 8px;">
+                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 12.0%"></div>
+                                    </div>
+                                    <small class="text-muted">R$ 5.080,00</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-6">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body">
+                                <h5 class="fw-bold mb-4">Próximos Vencimentos</h5>
+                                <div class="list-group list-group-flush">
+                                    <div class="list-group-item px-0 border-0 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <h6 class="mb-0 fw-bold">CDB Banco Inter</h6>
+                                            <small class="text-muted">15/01/2026</small>
+                                        </div>
+                                        <span class="badge bg-warning text-dark">643 dias</span>
+                                    </div>
+                                    
+                                    <div class="list-group-item px-0 border-0 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <h6 class="mb-0 fw-bold">Tesouro Selic 2027</h6>
+                                            <small class="text-muted">01/03/2027</small>
+                                        </div>
+                                        <span class="badge bg-info">806 dias</span>
+                                    </div>
+                                    
+                                    <div class="list-group-item px-0 border-0 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <h6 class="mb-0 fw-bold">Tesouro IPCA+ 2029</h6>
+                                            <small class="text-muted">15/08/2029</small>
+                                        </div>
+                                        <span class="badge bg-secondary">1.724 dias</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Histórico de Movimentações -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center mb-4">
+                                    <h5 class="fw-bold mb-0">Movimentações Recentes</h5>
+                                    <button class="btn btn-sm btn-outline-primary">Ver todas</button>
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="table table-hover align-middle mb-0">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th class="ps-4">Data</th>
+                                                <th>Operação</th>
+                                                <th>Ativo</th>
+                                                <th>Valor</th>
+                                                <th class="text-end pe-4">Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="ps-4">05/12/2024</td>
+                                                <td class="fw-bold">Aporte</td>
+                                                <td>HGLG11</td>
+                                                <td class="text-success fw-bold">+ R$ 1.000,00</td>
+                                                <td class="text-end pe-4"><span class="badge bg-success-subtle text-success rounded-pill">Concluído</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="ps-4">28/11/2024</td>
+                                                <td class="fw-bold">Dividendos</td>
+                                                <td>XPML11</td>
+                                                <td class="text-success fw-bold">+ R$ 87,50</td>
+                                                <td class="text-end pe-4"><span class="badge bg-success-subtle text-success rounded-pill">Creditado</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="ps-4">15/11/2024</td>
+                                                <td class="fw-bold">Aporte</td>
+                                                <td>CDB Banco Inter</td>
+                                                <td class="text-success fw-bold">+ R$ 5.000,00</td>
+                                                <td class="text-end pe-4"><span class="badge bg-success-subtle text-success rounded-pill">Concluído</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="ps-4">10/11/2024</td>
+                                                <td class="fw-bold">Venda Parcial</td>
+                                                <td>PETR4</td>
+                                                <td class="text-danger fw-bold">- R$ 500,00</td>
+                                                <td class="text-end pe-4"><span class="badge bg-success-subtle text-success rounded-pill">Concluído</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="ps-4">01/11/2024</td>
+                                                <td class="fw-bold">Juros</td>
+                                                <td>Tesouro Selic 2027</td>
+                                                <td class="text-success fw-bold">+ R$ 142,30</td>
+                                                <td class="text-end pe-4"><span class="badge bg-success-subtle text-success rounded-pill">Creditado</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container text-center">
+            <p class="mb-1 fw-bold">Fintech &copy; 2024</p>
+            <p>Simplificando sua vida financeira.</p>
+            <div>
+                <a href="#" class="text-white me-3 text-decoration-none"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="text-white me-3 text-decoration-none"><i class="bi bi-linkedin"></i></a>
+                <a href="#" class="text-white text-decoration-none"><i class="bi bi-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../Js/sript.js"></script>
+
+</body>
+        

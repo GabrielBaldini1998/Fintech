@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+        <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fintech</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="../Css/transferir.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+        <!-- JavaScript -->
+
+    </head>
+    
+    <body>
+
+        <div class="d-flex" id="wrapper">
+            
+            <div class="text-white" id="sidebar-wrapper">
+                <div class="sidebar-heading text-center py-4 primary-text fs-4 fw-bold text-uppercase border-bottom">
+                    <h1>Fintech</h1>
+                </div>
+                <div class="list-group list-group-flush my-3">
+                    <a href="index.html" class="list-group-item list-group-item-action bg-transparent second-text">
+                        <i class="bi bi-speedometer2 me-2"></i>Dashboard
+                    <a href="investimentos.html" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+                        <i class="bi bi-graph-up-arrow me-2"></i>Investimentos
+                    </a>
+                    <a href="transferir.html" class="list-group-item list-group-item-action bg-transparent second-text active">
+                        <i class="bi bi-arrow-left-right me-2"></i>Transferir
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold">
+                        <i class="bi bi-person-circle me-2"></i>Perfil
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action bg-transparent text-danger fw-bold mt-5">
+                        <i class="bi bi-box-arrow-left me-2"></i>Sair
+                    </a>
+                </div>
+            </div>
+            <div id="page-content-wrapper">
+                
+                <nav class="navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4">
+                    <div class="d-flex align-items-center">
+                        <i class="bi bi-list primary-text fs-4 me-3" id="menu-toggle"></i>
+                        <h2 class="fs-2 m-0">Área Pix e Transferências</h2>
+                    </div>
+                </nav>
+    
+                <div class="container-fluid px-4">
+    
+                    <div class="row mb-4">
+                        <div class="col">
+                            <h2 class="fw-bold text-dark">Transferências e Pix</h2>
+                            <p class="text-muted">Realize transferências e gerencie seus pagamentos.</p>
+                        </div>
+                    </div>
+
+                    <div class="row g-4">
+                        
+                        <div class="col-lg-7">
+                            <div class="p-4 bg-white rounded shadow-sm card-modern h-100">
+                                <h4 class="mb-4 fw-bold text-primary"><i class="bi bi-send me-2"></i>Nova Transferência</h4>
+                                
+                                <form>
+                                    <div class="mb-4">
+                                        <label class="form-label text-muted small fw-bold">QUAL O VALOR?</label>
+                                        <div class="input-group input-group-lg">
+                                            <span class="input-group-text bg-transparent border-0 ps-0 text-primary fw-bold">R$</span>
+                                            <input type="number" class="form-control border-0 fs-1 fw-bold text-primary shadow-none ps-1" placeholder="0,00" autofocus>
+                                        </div>
+                                        <div class="form-text">Saldo disponível: R$ 12.500,00</div>
+                                    </div>
+    
+                                    <div class="row g-3 mb-3">
+                                        <div class="col-md-4">
+                                            <label class="form-label fw-bold">Tipo de Chave</label>
+                                            <select class="form-select form-select-lg">
+                                                <option selected>E-mail</option>
+                                                <option>CPF/CNPJ</option>
+                                                <option>Celular</option>
+                                                <option>Chave Aleatória</option>
+                                                <option>Agência/Conta</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <label class="form-label fw-bold">Chave ou Dados</label>
+                                            <input type="text" class="form-control form-control-lg" placeholder="Digite a chave Pix">
+                                        </div>
+                                    </div>
+    
+                                    <div class="mb-3">
+                                        <label class="form-label fw-bold">Quando?</label>
+                                        <input type="date" class="form-control form-control-lg">
+                                    </div>
+    
+                                    <div class="mb-4">
+                                        <label class="form-label fw-bold">Descrição (Opcional)</label>
+                                        <textarea class="form-control" rows="2" placeholder="Ex: Aluguel, Churrasco..."></textarea>
+                                    </div>
+    
+                                    <div class="d-grid">
+                                        <button type="submit" class="btn btn-primary btn-lg rounded-pill py-3 fw-bold shadow-sm">
+                                            Confirmar Transferência <i class="bi bi-arrow-right ms-2"></i>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+    
+                        <div class="col-lg-5">
+                            <div class="p-4 bg-white rounded shadow-sm card-modern mb-4">
+                                <h5 class="mb-3 fw-bold text-secondary">Frequentes</h5>
+                                
+                                <div class="d-flex gap-3 overflow-auto pb-2 contacts-scroll">
+                                    <div class="text-center cursor-pointer contact-item">
+                                        <div class="avatar bg-primary-light text-primary rounded-circle mb-2">
+                                            <span class="fs-4 fw-bold">AM</span>
+                                        </div>
+                                        <small class="d-block fw-bold">Ana Maria</small>
+                                    </div>
+                                    <div class="text-center cursor-pointer contact-item">
+                                        <div class="avatar bg-success-light text-success rounded-circle mb-2">
+                                            <span class="fs-4 fw-bold">JP</span>
+                                        </div>
+                                        <small class="d-block fw-bold">João P.</small>
+                                    </div>
+                                    <div class="text-center cursor-pointer contact-item">
+                                        <div class="avatar bg-warning-light text-warning rounded-circle mb-2">
+                                            <span class="fs-4 fw-bold">L</span>
+                                        </div>
+                                        <small class="d-block fw-bold">Landlord</small>
+                                    </div>
+                                    <div class="text-center cursor-pointer contact-item">
+                                        <div class="avatar bg-danger-light text-danger rounded-circle mb-2">
+                                            <span class="fs-4 fw-bold">MS</span>
+                                        </div>
+                                        <small class="d-block fw-bold">Maria S.</small>
+                                    </div>
+                                    <div class="text-center cursor-pointer contact-item">
+                                        <div class="avatar bg-secondary-light text-secondary rounded-circle mb-2">
+                                            <span class="fs-4 fw-bold">CF</span>
+                                        </div>
+                                        <small class="d-block fw-bold">Carlos F.</small>
+                                    </div>
+                                    <div class="text-center cursor-pointer contact-item">
+                                        <div class="avatar bg-info-light text-info rounded-circle mb-2">
+                                            <i class="bi bi-plus-lg fs-4"></i>
+                                        </div>
+                                        <small class="d-block fw-bold">Novo</small>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="p-4 bg-white rounded shadow-sm card-modern">
+                                <h5 class="mb-3 fw-bold text-secondary">Histórico Recente</h5>
+                                <div class="list-group list-group-flush">
+                                    <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center px-0">
+                                        <div>
+                                            <h6 class="mb-0 fw-bold">Ana Maria</h6>
+                                            <small class="text-muted">Hoje, 10:45</small>
+                                        </div>
+                                        <span class="text-danger fw-bold">- R$ 200,00</span>
+                                    </a>
+                                    <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center px-0">
+                                        <div>
+                                            <h6 class="mb-0 fw-bold">Uber Technologies</h6>
+                                            <small class="text-muted">Ontem, 14:30</small>
+                                        </div>
+                                        <span class="text-danger fw-bold">- R$ 24,90</span>
+                                    </a>
+                                    <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center px-0">
+                                        <div>
+                                            <h6 class="mb-0 fw-bold">João Pedro</h6>
+                                            <small class="text-muted">01/12/2024</small>
+                                        </div>
+                                        <span class="text-danger fw-bold">- R$ 150,00</span>
+                                    </a>
+                                    <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center px-0">
+                                        <div>
+                                            <h6 class="mb-0 fw-bold">Padaria Estrela</h6>
+                                            <small class="text-muted">28/11/2024</small>
+                                        </div>
+                                        <span class="text-danger fw-bold">- R$ 45,00</span>
+                                    </a>
+                                    <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center px-0">
+                                        <div>
+                                            <h6 class="mb-0 fw-bold">Pix Recebido - Maria Silva</h6>
+                                            <small class="text-muted">27/11/2024</small>
+                                        </div>
+                                        <span class="text-success fw-bold">+ R$ 500,00</span>
+                                    </a>
+                                    <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center px-0">
+                                        <div>
+                                            <h6 class="mb-0 fw-bold">Carlos Ferreira</h6>
+                                            <small class="text-muted">25/11/2024</small>
+                                        </div>
+                                        <span class="text-danger fw-bold">- R$ 80,00</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+    
+                </div>
+
+                <!-- Transferências Agendadas -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-center mb-4">
+                                    <h5 class="fw-bold mb-0">Transferências Agendadas</h5>
+                                    <button class="btn btn-sm btn-outline-primary">Ver todas</button>
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="table table-hover align-middle mb-0">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th class="ps-4">Data Agendada</th>
+                                                <th>Destinatário</th>
+                                                <th>Valor</th>
+                                                <th class="text-end pe-4">Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="ps-4">10/12/2024</td>
+                                                <td class="fw-bold">João Pedro</td>
+                                                <td class="fw-bold">R$ 500,00</td>
+                                                <td class="text-end pe-4"><span class="badge bg-warning-subtle text-warning rounded-pill">Agendado</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="ps-4">15/12/2024</td>
+                                                <td class="fw-bold">Ana Maria</td>
+                                                <td class="fw-bold">R$ 300,00</td>
+                                                <td class="text-end pe-4"><span class="badge bg-warning-subtle text-warning rounded-pill">Agendado</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="container text-center">
+                <p class="mb-1 fw-bold">Fintech &copy; 2024</p>
+                <p>Simplificando sua vida financeira.</p>
+                <div>
+                    <a href="#" class="text-white me-3 text-decoration-none"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="text-white me-3 text-decoration-none"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" class="text-white text-decoration-none"><i class="bi bi-envelope"></i></a>
+                </div>
+            </div>
+        </footer>
+    
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="../Js/sript.js"></script>
+    </body>
+
+</html>
