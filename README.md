@@ -54,3 +54,28 @@ Fintech-master/
 │       ├── investimentos.html
 │       └── transferir.html
 └── README.md
+```
+
+
+🎨 Destaques de UI/UX
+* Design System: Uso consistente de paleta de cores moderna (Azul Fintech, Cinza Slate) definida via variáveis CSS.
+* Sidebar Responsiva: Menu lateral que se adapta a dispositivos móveis (toggle button).
+* Feedback Visual: Efeitos de hover em cards e tabelas, e alertas interativos (via alert do navegador) para simular ações de backend.
+
+🔧 Como Executar
+* Este é um projeto estático, não requer instalação de dependências via npm para visualização básica.
+1. Clone este repositório:
+
+* Bash
+git clone [https://github.com/GabrielBaldini1998/Fintech.git](https://github.com/GabrielBaldini1998/Fintech.git)
+
+2. Navegue até a pasta do projeto.
+
+3. Abra o arquivo Assets/Pages/index.html em seu navegador de preferência.
+
+Nota: Para que os ícones e fontes carreguem corretamente, é necessário estar conectado à internet (visto que são carregados via CDN).
+
+🤝 Contribuição
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests com melhorias.
+
+Desenvolvido com 💙 por Gabriel Baldini
