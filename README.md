@@ -62,7 +62,7 @@ Fintech-master/
 * Sidebar Responsiva: Menu lateral que se adapta a dispositivos móveis (toggle button).
 * Feedback Visual: Efeitos de hover em cards e tabelas, e alertas interativos (via alert do navegador) para simular ações de backend.
 
-🔧 Como Executar
+## 🔧 Como Executar
 * Este é um projeto estático, não requer instalação de dependências via npm para visualização básica.
 1. Clone este repositório:
 
