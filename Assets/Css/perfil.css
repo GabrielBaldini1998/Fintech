@@ -336,6 +336,7 @@ body.toggled #sidebar-wrapper {
 
 .card-body {
     padding: var(--spacing-xl);
+    height: 568px;
 }
 
 .nav-tabs {

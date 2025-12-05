@@ -1,57 +1,59 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil - Fintech</title>
 
-        <!-- CSS -->
-        <link rel="stylesheet" href="../Css/perfil.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../Css/perfil.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
-        <!-- Google Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    </head>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
 <body>
 
-        <div class="d-flex" id="wrapper">
-        
-            <div class="text-white" id="sidebar-wrapper">
-                <div class="sidebar-heading text-center py-4 primary-text fs-4 fw-bold text-uppercase border-bottom">
+    <div class="d-flex" id="wrapper">
+
+        <div class="text-white" id="sidebar-wrapper">
+            <div class="sidebar-heading text-center py-4 primary-text fs-4 fw-bold text-uppercase border-bottom">
                 <h1>Fintech</h1>
-                </div>
-                <div class="list-group list-group-flush my-3">
-                    <a href="index.html" class="list-group-item list-group-item-action bg-transparent second-text">
-                        <i class="bi bi-speedometer2 me-2"></i>Dashboard
-                    </a>
+            </div>
+            <div class="list-group list-group-flush my-3">
+                <a href="index.html" class="list-group-item list-group-item-action bg-transparent second-text">
+                    <i class="bi bi-speedometer2 me-2"></i>Dashboard
+                </a>
                 <a href="investimentos.html" class="list-group-item list-group-item-action bg-transparent second-text">
-                        <i class="bi bi-graph-up-arrow me-2"></i>Investimentos
-                    </a>
-                    <a href="transferir.html" class="list-group-item list-group-item-action bg-transparent second-text">
-                        <i class="bi bi-arrow-left-right me-2"></i>Transferir
-                    </a>
+                    <i class="bi bi-graph-up-arrow me-2"></i>Investimentos
+                </a>
+                <a href="transferir.html" class="list-group-item list-group-item-action bg-transparent second-text">
+                    <i class="bi bi-arrow-left-right me-2"></i>Transferir
+                </a>
                 <a href="perfil.html" class="list-group-item list-group-item-action bg-transparent second-text active">
-                        <i class="bi bi-person-circle me-2"></i>Perfil
-                    </a>
+                    <i class="bi bi-person-circle me-2"></i>Perfil
+                </a>
                 <a href="#" class="list-group-item list-group-item-action bg-transparent text-danger fw-bold mt-5">
                     <i class="bi bi-box-arrow-left me-2"></i>Sair
-                    </a>
-                </div>
+                </a>
             </div>
-        
-            <div id="page-content-wrapper">
-                <nav class="navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4">
-                    <div class="d-flex align-items-center">
-                        <i class="bi bi-list primary-text fs-4 me-3" id="menu-toggle"></i>
+        </div>
+
+        <div id="page-content-wrapper">
+            <nav class="navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4">
+                <div class="d-flex align-items-center">
+                    <i class="bi bi-list primary-text fs-4 me-3" id="menu-toggle"></i>
                     <h2 class="fs-2 m-0">Meu Perfil</h2>
                 </div>
             </nav>
 
             <div class="container-fluid px-4">
-                
+
                 <div class="row mb-4">
                     <div class="col">
                         <h2 class="fw-bold text-dark">Configurações do Perfil</h2>
@@ -63,33 +65,37 @@
                     <!-- Card de Foto de Perfil -->
                     <div class="col-12 col-lg-4">
                         <div class="card border-0 shadow-sm">
-                            <div class="card-body text-center">
-                                <div class="profile-photo-container mb-4">
-                                    <div class="profile-photo-wrapper">
-                                        <img id="profile-photo-preview" src="https://ui-avatars.com/api/?name=Gabriel+Baldini&background=4361ee&color=fff&size=200" alt="Foto de Perfil" class="profile-photo">
-                                        <label for="profile-photo-input" class="profile-photo-overlay">
-                                            <i class="bi bi-camera-fill"></i>
-                                            <span>Alterar foto</span>
-                                        </label>
-                                        <input type="file" id="profile-photo-input" accept="image/*" class="d-none">
+                            <div class="card-body d-flex flex-column align-items-center justify-content-center text-center">
+                                <div class="d-flex flex-column">
+                                    <div class="profile-photo-container mb-4">
+                                        <div class="profile-photo-wrapper">
+                                            <img id="profile-photo-preview"
+                                                src="https://ui-avatars.com/api/?name=Gabriel+Baldini&background=4361ee&color=fff&size=200"
+                                                alt="Foto de Perfil" class="profile-photo">
+                                            <label for="profile-photo-input" class="profile-photo-overlay">
+                                                <i class="bi bi-camera-fill"></i>
+                                                <span>Alterar foto</span>
+                                            </label>
+                                            <input type="file" id="profile-photo-input" accept="image/*" class="d-none">
+                                        </div>
                                     </div>
-                                </div>
-                                <h4 class="fw-bold mb-1" id="profile-name">Gabriel Baldini</h4>
-                                <p class="text-muted mb-3" id="profile-email">gabriel.baldini@email.com</p>
-                                <div class="d-flex justify-content-center gap-2 mb-3">
-                                    <span class="badge bg-primary-subtle text-primary rounded-pill">
-                                        <i class="bi bi-shield-check me-1"></i>Verificado
-                                    </span>
-                                </div>
-                                <div class="profile-stats">
-                                    <div class="stat-item">
-                                        <div class="stat-value">R$ 12.500</div>
-                                        <div class="stat-label">Saldo Total</div>
+                                    <h4 class="fw-bold mb-1" id="profile-name">Gabriel Baldini</h4>
+                                    <p class="text-muted mb-3" id="profile-email">gabriel.baldini@email.com</p>
+                                    <div class="d-flex justify-content-center gap-2 mb-3">
+                                        <span class="badge bg-primary-subtle text-primary rounded-pill">
+                                            <i class="bi bi-shield-check me-1"></i>Verificado
+                                        </span>
                                     </div>
-                                    <div class="stat-divider"></div>
-                                    <div class="stat-item">
-                                        <div class="stat-value">42</div>
-                                        <div class="stat-label">Transações</div>
+                                    <div class="profile-stats">
+                                        <div class="stat-item">
+                                            <div class="stat-value">R$ 12.500</div>
+                                            <div class="stat-label">Saldo Total</div>
+                                        </div>
+                                        <div class="stat-divider"></div>
+                                        <div class="stat-item">
+                                            <div class="stat-value">42</div>
+                                            <div class="stat-label">Transações</div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -102,17 +108,20 @@
                             <div class="card-body">
                                 <ul class="nav nav-tabs mb-4" id="profileTabs" role="tablist">
                                     <li class="nav-item" role="presentation">
-                                        <button class="nav-link active" id="personal-tab" data-bs-toggle="tab" data-bs-target="#personal" type="button" role="tab">
+                                        <button class="nav-link active" id="personal-tab" data-bs-toggle="tab"
+                                            data-bs-target="#personal" type="button" role="tab">
                                             <i class="bi bi-person me-2"></i>Dados Pessoais
                                         </button>
                                     </li>
                                     <li class="nav-item" role="presentation">
-                                        <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab">
+                                        <button class="nav-link" id="contact-tab" data-bs-toggle="tab"
+                                            data-bs-target="#contact" type="button" role="tab">
                                             <i class="bi bi-telephone me-2"></i>Contato
                                         </button>
                                     </li>
                                     <li class="nav-item" role="presentation">
-                                        <button class="nav-link" id="preferences-tab" data-bs-toggle="tab" data-bs-target="#preferences" type="button" role="tab">
+                                        <button class="nav-link" id="preferences-tab" data-bs-toggle="tab"
+                                            data-bs-target="#preferences" type="button" role="tab">
                                             <i class="bi bi-gear me-2"></i>Preferências
                                         </button>
                                     </li>
@@ -125,16 +134,19 @@
                                             <div class="row g-3">
                                                 <div class="col-md-6">
                                                     <label class="form-label fw-bold">Nome Completo</label>
-                                                    <input type="text" class="form-control" id="input-nome" value="Gabriel Baldini" required>
+                                                    <input type="text" class="form-control" id="input-nome"
+                                                        value="Gabriel Baldini" required>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <label class="form-label fw-bold">CPF</label>
-                                                    <input type="text" class="form-control" id="input-cpf" value="123.456.789-00" readonly>
+                                                    <input type="text" class="form-control" id="input-cpf"
+                                                        value="123.456.789-00" readonly>
                                                     <small class="text-muted">CPF não pode ser alterado</small>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <label class="form-label fw-bold">Data de Nascimento</label>
-                                                    <input type="date" class="form-control" id="input-nascimento" value="1998-05-15" required>
+                                                    <input type="date" class="form-control" id="input-nascimento"
+                                                        value="1998-05-15" required>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <label class="form-label fw-bold">Gênero</label>
@@ -147,7 +159,8 @@
                                                 </div>
                                                 <div class="col-12">
                                                     <label class="form-label fw-bold">Bio / Sobre Você</label>
-                                                    <textarea class="form-control" id="input-bio" rows="4" placeholder="Conte um pouco sobre você...">Entusiasta de tecnologia e finanças. Sempre buscando aprender e crescer financeiramente.</textarea>
+                                                    <textarea class="form-control" id="input-bio" rows="4"
+                                                        placeholder="Conte um pouco sobre você...">Entusiasta de tecnologia e finanças. Sempre buscando aprender e crescer financeiramente.</textarea>
                                                     <small class="text-muted">Máximo de 200 caracteres</small>
                                                 </div>
                                             </div>
@@ -155,7 +168,8 @@
                                                 <button type="submit" class="btn btn-primary">
                                                     <i class="bi bi-check-lg me-2"></i>Salvar Alterações
                                                 </button>
-                                                <button type="button" class="btn btn-outline-secondary ms-2" onclick="resetPersonalForm()">
+                                                <button type="button" class="btn btn-outline-secondary ms-2"
+                                                    onclick="resetPersonalForm()">
                                                     <i class="bi bi-arrow-counterclockwise me-2"></i>Cancelar
                                                 </button>
                                             </div>
@@ -168,20 +182,24 @@
                                             <div class="row g-3">
                                                 <div class="col-md-6">
                                                     <label class="form-label fw-bold">E-mail</label>
-                                                    <input type="email" class="form-control" id="input-email" value="gabriel.baldini@email.com" required>
+                                                    <input type="email" class="form-control" id="input-email"
+                                                        value="gabriel.baldini@email.com" required>
                                                     <small class="text-muted">Usado para login e notificações</small>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <label class="form-label fw-bold">Telefone</label>
-                                                    <input type="tel" class="form-control" id="input-telefone" value="(11) 98765-4321" required>
+                                                    <input type="tel" class="form-control" id="input-telefone"
+                                                        value="(11) 98765-4321" required>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <label class="form-label fw-bold">CEP</label>
-                                                    <input type="text" class="form-control" id="input-cep" value="01234-567" required>
+                                                    <input type="text" class="form-control" id="input-cep"
+                                                        value="01234-567" required>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <label class="form-label fw-bold">Cidade</label>
-                                                    <input type="text" class="form-control" id="input-cidade" value="São Paulo" required>
+                                                    <input type="text" class="form-control" id="input-cidade"
+                                                        value="São Paulo" required>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <label class="form-label fw-bold">Estado</label>
@@ -195,14 +213,16 @@
                                                 </div>
                                                 <div class="col-md-6">
                                                     <label class="form-label fw-bold">Endereço</label>
-                                                    <input type="text" class="form-control" id="input-endereco" value="Rua Exemplo, 123" required>
+                                                    <input type="text" class="form-control" id="input-endereco"
+                                                        value="Rua Exemplo, 123" required>
                                                 </div>
                                             </div>
                                             <div class="mt-4">
                                                 <button type="submit" class="btn btn-primary">
                                                     <i class="bi bi-check-lg me-2"></i>Salvar Alterações
                                                 </button>
-                                                <button type="button" class="btn btn-outline-secondary ms-2" onclick="resetContactForm()">
+                                                <button type="button" class="btn btn-outline-secondary ms-2"
+                                                    onclick="resetContactForm()">
                                                     <i class="bi bi-arrow-counterclockwise me-2"></i>Cancelar
                                                 </button>
                                             </div>
@@ -215,13 +235,15 @@
                                             <div class="mb-4">
                                                 <h5 class="fw-bold mb-3">Notificações</h5>
                                                 <div class="form-check form-switch mb-3">
-                                                    <input class="form-check-input" type="checkbox" id="notif-email" checked>
+                                                    <input class="form-check-input" type="checkbox" id="notif-email"
+                                                        checked>
                                                     <label class="form-check-label" for="notif-email">
                                                         Receber notificações por e-mail
                                                     </label>
                                                 </div>
                                                 <div class="form-check form-switch mb-3">
-                                                    <input class="form-check-input" type="checkbox" id="notif-sms" checked>
+                                                    <input class="form-check-input" type="checkbox" id="notif-sms"
+                                                        checked>
                                                     <label class="form-check-label" for="notif-sms">
                                                         Receber notificações por SMS
                                                     </label>
@@ -237,13 +259,15 @@
                                             <div class="mb-4">
                                                 <h5 class="fw-bold mb-3">Privacidade</h5>
                                                 <div class="form-check form-switch mb-3">
-                                                    <input class="form-check-input" type="checkbox" id="privacidade-perfil" checked>
+                                                    <input class="form-check-input" type="checkbox"
+                                                        id="privacidade-perfil" checked>
                                                     <label class="form-check-label" for="privacidade-perfil">
                                                         Perfil público
                                                     </label>
                                                 </div>
                                                 <div class="form-check form-switch mb-3">
-                                                    <input class="form-check-input" type="checkbox" id="privacidade-ativ" checked>
+                                                    <input class="form-check-input" type="checkbox"
+                                                        id="privacidade-ativ" checked>
                                                     <label class="form-check-label" for="privacidade-ativ">
                                                         Mostrar atividades recentes
                                                     </label>
@@ -253,13 +277,15 @@
                                             <div class="mb-4">
                                                 <h5 class="fw-bold mb-3">Tema</h5>
                                                 <div class="form-check mb-2">
-                                                    <input class="form-check-input" type="radio" name="theme" id="theme-light" value="light" checked>
+                                                    <input class="form-check-input" type="radio" name="theme"
+                                                        id="theme-light" value="light" checked>
                                                     <label class="form-check-label" for="theme-light">
                                                         <i class="bi bi-sun me-2"></i>Claro
                                                     </label>
                                                 </div>
                                                 <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="theme" id="theme-dark" value="dark">
+                                                    <input class="form-check-input" type="radio" name="theme"
+                                                        id="theme-dark" value="dark">
                                                     <label class="form-check-label" for="theme-dark">
                                                         <i class="bi bi-moon me-2"></i>Escuro
                                                     </label>
@@ -289,7 +315,8 @@
                                 </h5>
                                 <div class="row g-3">
                                     <div class="col-md-6">
-                                        <div class="d-flex justify-content-between align-items-center p-3 border rounded">
+                                        <div
+                                            class="d-flex justify-content-between align-items-center p-3 border rounded">
                                             <div>
                                                 <h6 class="fw-bold mb-1">Senha</h6>
                                                 <small class="text-muted">Última alteração: há 3 meses</small>
@@ -300,7 +327,8 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <div class="d-flex justify-content-between align-items-center p-3 border rounded">
+                                        <div
+                                            class="d-flex justify-content-between align-items-center p-3 border rounded">
                                             <div>
                                                 <h6 class="fw-bold mb-1">Autenticação de Dois Fatores</h6>
                                                 <small class="text-muted">Adicione uma camada extra de segurança</small>
@@ -317,9 +345,9 @@
                 </div>
 
             </div>
-            </div>
         </div>
-        
+    </div>
+
     <footer>
         <div class="container text-center">
             <p class="mb-1 fw-bold">Fintech &copy; 2024</p>
@@ -334,5 +362,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../Js/sript.js"></script>
-    </body>
+</body>
+
 </html>
