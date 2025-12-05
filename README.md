@@ -3,7 +3,7 @@
 ![Status do Projeto](https://img.shields.io/badge/Status-Em_Desenvolvimento-yellow)
 ![License](https://img.shields.io/badge/License-MIT-blue)
 
-Um painel administrativo (Dashboard) front-end para gestão financeira pessoal. O projeto simula uma interface bancária moderna, permitindo a visualização de saldos, investimentos e a simulação de transferências via Pix.
+Um painel administrativo (Dashboard) front-end para gestão financeira pessoal. O projeto simula uma interface bancária moderna, permitindo a visualização de saldos, investimentos, simulação de transferências via Pix e gerenciamento de perfil do usuário.
 
 ## 🚀 Tecnologias Utilizadas
 
@@ -18,7 +18,7 @@ O projeto foi desenvolvido utilizando tecnologias web modernas, focando em respo
 
 ## 📱 Funcionalidades
 
-O projeto conta com três telas principais interconectadas:
+O projeto conta com quatro telas principais interconectadas:
 
 ### 1. 📊 Dashboard (`index.html`)
 * Visão geral do saldo, valor investido e despesas (fatura).
@@ -38,21 +38,29 @@ O projeto conta com três telas principais interconectadas:
 * Formulário com validação simples de saldo (simulado via JS).
 * Preenchimento automático de chave Pix ao selecionar um contato.
 
+### 4. 👤 Perfil (`perfil.html`)
+* **Gestão de Dados:** Abas interativas para editar dados pessoais e informações de contato.
+* **Foto de Perfil:** Visualização com efeito de overlay para alteração de imagem.
+* **Preferências:** Configurações de notificações (E-mail, SMS, Push) e seletor de tema (Claro/Escuro).
+* **Segurança:** Atalhos para alteração de senha e autenticação de dois fatores (2FA).
+
 ## 📂 Estrutura do Projeto
 
 ```text
 Fintech-master/
 ├── Assets/
-│   ├── Css/
-│   │   ├── style.css         # Estilos gerais e do Dashboard
-│   │   ├── investimento.css  # Estilos específicos da pág. de Investimentos
-│   │   └── transferir.css    # Estilos específicos da pág. de Transferências
-│   ├── Js/
-│   │   └── sript.js          # Lógica global e específica por página
-│   └── Pages/
-│       ├── index.html        # Tela Inicial (Dashboard)
-│       ├── investimentos.html
-│       └── transferir.html
+│   ├── Css/
+│   │   ├── style.css         # Estilos gerais e do Dashboard
+│   │   ├── investimento.css  # Estilos específicos da pág. de Investimentos
+│   │   ├── transferir.css    # Estilos específicos da pág. de Transferências
+│   │   └── perfil.css        # Estilos específicos da pág. de Perfil
+│   ├── Js/
+│   │   └── sript.js          # Lógica global e específica por página
+│   └── Pages/
+│       ├── index.html        # Tela Inicial (Dashboard)
+│       ├── investimentos.html
+│       ├── transferir.html
+│       └── perfil.html
 └── README.md
 ```
 
