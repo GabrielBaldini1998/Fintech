@@ -1,6 +1,6 @@
 /* =========================================
-   1. DESIGN SYSTEM - VARIÁVEIS E CONFIGURAÇÕES
-   ========================================= */
+1. DESIGN SYSTEM - VARIÁVEIS E CONFIGURAÇÕES
+========================================= */
 :root {
     /* Paleta Principal - Cores Modernas */
     --primary-color: #4361ee;       /* Azul Fintech */
@@ -288,8 +288,9 @@ body.toggled #sidebar-wrapper {
 .table thead th {
     background-color: var(--bg-hover);
     color: var(--text-secondary);
-    font-weight: 600;
-    font-size: var(--font-size-sm);
+    height: 40px;
+    font-weight: bold;
+    font-size: var(--font-size-lg);
     text-transform: uppercase;
     letter-spacing: 0.5px;
     border-bottom: 2px solid #e5e7eb;
@@ -307,6 +308,11 @@ body.toggled #sidebar-wrapper {
 .table-hover tbody tr:hover {
     background-color: var(--bg-hover);
     transition: background-color var(--transition-fast);
+}
+.table tfoot td {
+    background-color: var(--bg-hover);
+    padding: var(--spacing-sm);
+    text-transform: uppercase;
 }
 
 /* Ícones Pequenos na Tabela */
