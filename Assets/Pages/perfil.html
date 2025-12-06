@@ -20,7 +20,7 @@
 <body>
 
     <div class="d-flex" id="wrapper">
-
+        <!--Menu Lateral-->
         <div class="text-white" id="sidebar-wrapper">
             <div class="sidebar-heading text-center py-4 primary-text fs-4 fw-bold text-uppercase border-bottom">
                 <h1>Fintech</h1>
@@ -43,7 +43,8 @@
                 </a>
             </div>
         </div>
-
+        <!--Fim Menu Lateral-->
+        
         <div id="page-content-wrapper">
             <nav class="navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4">
                 <div class="d-flex align-items-center">
@@ -53,18 +54,19 @@
             </nav>
 
             <div class="container-fluid px-4">
-
+                <!-- Texto introdutório -->
                 <div class="row mb-4">
                     <div class="col">
                         <h2 class="fw-bold text-dark">Configurações do Perfil</h2>
                         <p class="text-muted">Gerencie suas informações pessoais e preferências.</p>
                     </div>
                 </div>
+                <!-- Fim Texto introdutório -->
 
                 <div class="row g-4">
                     <!-- Card de Foto de Perfil -->
                     <div class="col-12 col-lg-4">
-                        <div class="card border-0 shadow-sm">
+                        <div class="card border-0 shadow-sm card-photo">
                             <div class="card-body d-flex flex-column align-items-center justify-content-center text-center">
                                 <div class="d-flex flex-column">
                                     <div class="profile-photo-container mb-4">
@@ -104,7 +106,7 @@
 
                     <!-- Formulário de Informações -->
                     <div class="col-12 col-lg-8">
-                        <div class="card border-0 shadow-sm">
+                        <div class="card border-0 shadow-sm card-form">
                             <div class="card-body">
                                 <ul class="nav nav-tabs mb-4" id="profileTabs" role="tablist">
                                     <li class="nav-item" role="presentation">
@@ -304,6 +306,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- Fim Formulário de Informações -->
 
                 <!-- Card de Segurança -->
                 <div class="row mt-4">
@@ -315,26 +318,34 @@
                                 </h5>
                                 <div class="row g-3">
                                     <div class="col-md-6">
-                                        <div
-                                            class="d-flex justify-content-between align-items-center p-3 border rounded">
-                                            <div>
-                                                <h6 class="fw-bold mb-1">Senha</h6>
-                                                <small class="text-muted">Última alteração: há 3 meses</small>
+                                        <div class="security-item">
+                                            <div class="security-content">
+                                                <div class="security-icon">
+                                                    <i class="bi bi-key"></i>
+                                                </div>
+                                                <div class="security-info">
+                                                    <h6 class="fw-bold mb-1">Senha</h6>
+                                                    <small class="text-muted">Última alteração: há 3 meses</small>
+                                                </div>
                                             </div>
                                             <button class="btn btn-outline-primary btn-sm" onclick="changePassword()">
-                                                <i class="bi bi-key me-1"></i>Alterar
+                                                <i class="bi bi-pencil me-1"></i>Alterar
                                             </button>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <div
-                                            class="d-flex justify-content-between align-items-center p-3 border rounded">
-                                            <div>
-                                                <h6 class="fw-bold mb-1">Autenticação de Dois Fatores</h6>
-                                                <small class="text-muted">Adicione uma camada extra de segurança</small>
+                                        <div class="security-item">
+                                            <div class="security-content">
+                                                <div class="security-icon">
+                                                    <i class="bi bi-shield-check"></i>
+                                                </div>
+                                                <div class="security-info">
+                                                    <h6 class="fw-bold mb-1">Autenticação de Dois Fatores</h6>
+                                                    <small class="text-muted">Adicione uma camada extra de segurança</small>
+                                                </div>
                                             </div>
                                             <button class="btn btn-outline-primary btn-sm" onclick="enable2FA()">
-                                                <i class="bi bi-shield-check me-1"></i>Ativar
+                                                <i class="bi bi-plus-circle me-1"></i>Ativar
                                             </button>
                                         </div>
                                     </div>
@@ -343,11 +354,13 @@
                         </div>
                     </div>
                 </div>
+                <!-- Fim Card de Segurança -->
 
             </div>
         </div>
     </div>
 
+    <!-- Rodapé-->
     <footer>
         <div class="container text-center">
             <p class="mb-1 fw-bold">Fintech &copy; 2024</p>

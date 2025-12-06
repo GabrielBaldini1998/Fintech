@@ -21,14 +21,15 @@
     
 <body>
     <div class="d-flex" id="wrapper">
-            
-        <div class="text-white" id="sidebar-wrapper">
+            <!--Menu Lateral-->
+            <div class="text-white" id="sidebar-wrapper">
             <div class="sidebar-heading text-center py-4 primary-text fs-4 fw-bold text-uppercase border-bottom">
                 <h1>Fintech</h1>
             </div>
             <div class="list-group list-group-flush my-3">
                 <a href="index.html" class="list-group-item list-group-item-action bg-transparent second-text">
                     <i class="bi bi-speedometer2 me-2"></i>Dashboard
+                </a>
                 <a href="investimentos.html" class="list-group-item list-group-item-action bg-transparent second-text active">
                     <i class="bi bi-graph-up-arrow me-2"></i>Investimentos
                 </a>
@@ -43,6 +44,8 @@
                 </a>
             </div>
         </div>
+        <!--Fim Menu Lateral-->
+        
         <div id="page-content-wrapper">
             
             <nav class="navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4">
@@ -53,14 +56,16 @@
             </nav>
 
             <div class="container-fluid px-4">
-                
+                <!-- Texto introdutório -->
                 <div class="row mb-4">
                     <div class="col">
                         <h2 class="fw-bold text-dark">Principais investimentos</h2>
                         <p class="text-muted">Acompanhe seu portfólio de investimentos.</p>
                     </div>
                 </div>
+                <!-- Fim Texto introdutório -->
 
+                <!--Linha dos status da vida financeira-->
                 <div class="row g-4 mb-5">
                     <!-- Patrimônio Total - Linha completa -->
                     <div class="col-12">
@@ -104,7 +109,9 @@
                         </div>
                     </div>
                 </div>
+                <!--Fim Linha dos status da vida financeira-->
 
+                <!-- Sessão da tabela -->
                 <div class="row my-5">
                     <div class="col-12">
                         <div class="d-flex justify-content-between align-items-center mb-3">
@@ -118,16 +125,22 @@
                             <div class="card-body p-0">
                                 <div class="table-responsive">
                                     <table class="table table-hover align-middle mb-0">
+                                        <!--Inicio da tabela-->
                                         <thead class="table-light">
+                                            <!-- Inicio da primeira linha da tabela-->
                                             <tr>
                                                 <th class="ps-4">Ativo</th>
                                                 <th>Categoria</th>
                                                 <th>Valor Atual</th>
                                                 <th>Rentabilidade</th>
-                                                <th class="d-none d-md-table-cell">Vencimento</th> <th class="text-end pe-4">Ações</th>
+                                                <th class="d-none d-md-table-cell">Vencimento</th>
+                                                <th class="text-end pe-4">Ações</th>
                                             </tr>
+                                            <!-- Fim da primeira linha da tabela-->
                                         </thead>
+
                                         <tbody>
+                                        <!--Inicio dos dados da tabela-->
                                             <tr>
                                                 <td class="ps-4">
                                                     <div class="d-flex align-items-center">
@@ -281,13 +294,16 @@
                                                     <button class="btn btn-sm btn-light text-success"><i class="bi bi-plus-circle"></i></button>
                                                 </td>
                                             </tr>
+                                        <!--Fim dos dados da tabela-->
                                         </tbody>
+                                        <!--final da tabela-->
                                     </table>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- Fim da Sessão da tabela -->
 
                 <!-- Seção de Distribuição do Portfólio -->
                 <div class="row mb-5">
@@ -364,6 +380,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- Fim Seção de Distribuição do Portfólio -->
 
                 <!-- Histórico de Movimentações -->
                 <div class="row">
@@ -376,7 +393,9 @@
                                 </div>
                                 <div class="table-responsive">
                                     <table class="table table-hover align-middle mb-0">
+                                        <!--Inicio da tabela-->
                                         <thead class="table-light">
+                                            <!-- Inicio da primeira linha da tabela-->
                                             <tr>
                                                 <th class="ps-4">Data</th>
                                                 <th>Operação</th>
@@ -384,8 +403,11 @@
                                                 <th>Valor</th>
                                                 <th class="text-end pe-4">Status</th>
                                             </tr>
+                                            <!-- Fim da primeira linha da tabela-->
                                         </thead>
+
                                         <tbody>
+                                        <!--Inicio dos dados da tabela-->
                                             <tr>
                                                 <td class="ps-4">05/12/2024</td>
                                                 <td class="fw-bold">Aporte</td>
@@ -421,18 +443,22 @@
                                                 <td class="text-success fw-bold">+ R$ 142,30</td>
                                                 <td class="text-end pe-4"><span class="badge bg-success-subtle text-success rounded-pill">Creditado</span></td>
                                             </tr>
+                                        <!--Fim dos dados da tabela-->
                                         </tbody>
+                                        <!--final da tabela-->
                                     </table>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- Fim Histórico de Movimentações -->
 
             </div>
         </div>
     </div>
 
+    <!-- Rodapé-->
     <footer>
         <div class="container text-center">
             <p class="mb-1 fw-bold">Fintech &copy; 2024</p>
@@ -447,6 +473,5 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../Js/sript.js"></script>
-
 </body>
-        
+</html>

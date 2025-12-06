@@ -336,6 +336,11 @@ body.toggled #sidebar-wrapper {
 
 .card-body {
     padding: var(--spacing-xl);
+}
+
+/* Altura fixa para o card do formulário e card da foto */
+.card-form .card-body,
+.card-photo .card-body {
     height: 568px;
 }
 
@@ -454,14 +459,85 @@ textarea.form-control {
 /* =========================================
    8. SEÇÃO DE SEGURANÇA
    ========================================= */
-.border.rounded {
-    border-color: #e5e7eb !important;
+.security-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-lg);
+    border: 1px solid #e5e7eb;
+    border-radius: var(--radius-md);
+    background-color: var(--bg-white);
     transition: all var(--transition-base);
+    margin-bottom: var(--spacing-md);
 }
 
-.border.rounded:hover {
-    border-color: var(--primary-color) !important;
-    box-shadow: var(--shadow-sm);
+.security-item:hover {
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.security-content {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    flex: 1;
+}
+
+.security-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-md);
+    background: linear-gradient(135deg, rgba(67, 97, 238, 0.1) 0%, rgba(63, 55, 201, 0.1) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    font-size: var(--font-size-xl);
+    flex-shrink: 0;
+}
+
+.security-info {
+    flex: 1;
+}
+
+.security-info h6 {
+    color: var(--text-dark);
+    font-size: var(--font-size-base);
+    margin-bottom: var(--spacing-xs);
+}
+
+.security-info small {
+    color: var(--text-muted);
+    font-size: var(--font-size-sm);
+}
+
+.security-item .btn {
+    flex-shrink: 0;
+    margin-left: var(--spacing-md);
+}
+
+.security-item .btn-sm {
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: var(--font-size-sm);
+}
+
+/* Responsividade para Card de Segurança */
+@media (max-width: 768px) {
+    .security-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-md);
+    }
+
+    .security-item .btn {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .security-content {
+        width: 100%;
+    }
 }
 
 /* =========================================

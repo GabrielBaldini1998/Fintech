@@ -89,9 +89,8 @@ body {
 }
 
 /* =========================================
-   3. LAYOUT RESPONSIVO (SIDEBAR FIXA)
+3. LAYOUT RESPONSIVO (SIDEBAR FIXA)
    ========================================= */
-
 /* O Wrapper segura tudo */
 #wrapper {
     display: flex;
@@ -175,6 +174,10 @@ body {
 
 #sidebar-wrapper .border-bottom {
     border: none !important;
+}
+
+.container-fluid p, h2{
+    margin-left: 20px;
 }
 
 /* Conteúdo Principal */
