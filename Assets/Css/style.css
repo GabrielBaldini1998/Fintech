@@ -176,10 +176,6 @@ body {
     border: none !important;
 }
 
-.container-fluid p, h2{
-    margin-left: 20px;
-}
-
 /* Conteúdo Principal */
 #page-content-wrapper {
     width: 100%;
@@ -319,7 +315,7 @@ body.toggled #sidebar-wrapper {
 }
 
 /* =========================================
-   FILTRO DE TABELAS
+FILTRO DE TABELAS
    ========================================= */
 .table-filter {
     margin-bottom: var(--spacing-md);
