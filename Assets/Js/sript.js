@@ -64,6 +64,9 @@ function initBotaoSair() {
 function initPageSpecifics() {
     // Verifica em qual página estamos através da existência de elementos
     
+    // Inicializa filtros de tabelas em todas as páginas
+    initTableFilters();
+    
     // Página de Transferência
     const formTransferencia = document.querySelector("form");
     if (formTransferencia && document.querySelector("input[placeholder='Digite a chave Pix']")) {
@@ -419,5 +422,127 @@ function resetPersonalForm() {
 function resetContactForm() {
     if (confirm("Deseja descartar as alterações não salvas?")) {
         document.getElementById("contact-form").reset();
+    }
+}
+
+/* ==========================================================================
+   FUNCIONALIDADE DE FILTRO DE TABELAS
+   Objetivo: Permitir busca e filtro em todas as tabelas do site
+   ========================================================================== */
+
+function initTableFilters() {
+    // Encontra todas as tabelas na página
+    const tables = document.querySelectorAll("table.table");
+    
+    tables.forEach((table, index) => {
+        // Cria o campo de busca acima da tabela
+        const filterInput = createFilterInput(table, index);
+        
+        // Insere o campo de busca antes da tabela
+        const tableContainer = table.closest(".table-responsive") || table.parentElement;
+        if (tableContainer) {
+            tableContainer.insertBefore(filterInput, table);
+        }
+        
+        // Adiciona evento de input para filtrar
+        const input = filterInput.querySelector("input");
+        if (input) {
+            input.addEventListener("input", function() {
+                filterTable(table, this.value);
+            });
+        }
+    });
+}
+
+function createFilterInput(table, index) {
+    const filterContainer = document.createElement("div");
+    filterContainer.className = "table-filter mb-3";
+    filterContainer.innerHTML = `
+        <div class="input-group">
+            <span class="input-group-text bg-transparent border-end-0">
+                <i class="bi bi-search text-muted"></i>
+            </span>
+            <input type="text" 
+                   class="form-control border-start-0" 
+                   id="table-filter-${index}"
+                   placeholder="Buscar na tabela...">
+            <button class="btn btn-outline-secondary border-start-0" type="button" id="clear-filter-${index}" style="display: none;">
+                <i class="bi bi-x-lg"></i>
+            </button>
+        </div>
+    `;
+    
+    // Adiciona evento para limpar filtro
+    const clearBtn = filterContainer.querySelector(`#clear-filter-${index}`);
+    const input = filterContainer.querySelector("input");
+    
+    if (clearBtn && input) {
+        clearBtn.addEventListener("click", function() {
+            input.value = "";
+            filterTable(table, "");
+            this.style.display = "none";
+            input.focus();
+        });
+        
+        input.addEventListener("input", function() {
+            if (this.value.length > 0) {
+                clearBtn.style.display = "block";
+            } else {
+                clearBtn.style.display = "none";
+            }
+        });
+    }
+    
+    return filterContainer;
+}
+
+function filterTable(table, searchText) {
+    const tbody = table.querySelector("tbody");
+    if (!tbody) return;
+    
+    const rows = tbody.querySelectorAll("tr");
+    const searchLower = searchText.toLowerCase().trim();
+    
+    let visibleCount = 0;
+    
+    rows.forEach(row => {
+        const text = row.textContent.toLowerCase();
+        const matches = text.includes(searchLower);
+        
+        if (matches) {
+            row.style.display = "";
+            visibleCount++;
+        } else {
+            row.style.display = "none";
+        }
+    });
+    
+    // Mostra mensagem se não houver resultados
+    showNoResultsMessage(table, visibleCount === 0 && searchText.length > 0);
+}
+
+function showNoResultsMessage(table, show) {
+    const tbody = table.querySelector("tbody");
+    if (!tbody) return;
+    
+    let noResultsRow = tbody.querySelector("tr.no-results-message");
+    
+    if (show) {
+        if (!noResultsRow) {
+            noResultsRow = document.createElement("tr");
+            noResultsRow.className = "no-results-message";
+            const colCount = table.querySelector("thead tr").querySelectorAll("th").length;
+            noResultsRow.innerHTML = `
+                <td colspan="${colCount}" class="text-center py-4 text-muted">
+                    <i class="bi bi-search me-2"></i>Nenhum resultado encontrado
+                </td>
+            `;
+            tbody.appendChild(noResultsRow);
+        }
+        noResultsRow.style.display = "";
+    } else {
+        if (noResultsRow) {
+            noResultsRow.style.display = "none";
+        }
     }
 }
