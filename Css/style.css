@@ -95,7 +95,7 @@ body {
 #wrapper {
     display: flex;
     width: 100%;
-    overflow-x: hidden;
+    overflow-x: hidden; /* O overflow-x é responsável por controlar o desbordamento horizontal do conteúdo. */
     background-color: var(--bg-light);
     min-height: 100vh;
 }
